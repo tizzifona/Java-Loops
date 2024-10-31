@@ -30,4 +30,26 @@ public class MultiplicationTableTest {
 
         assertThat(outputStream.toString(), is(equalTo(expectedOutput)));
     }
+
+    @Test
+    public void testMultiplicationTableFor10() {
+        MultiplicationTable table = new MultiplicationTable();
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        table.printMultiplicationTable(10);
+
+        String expectedOutput = "10 x 1 = 10\n" +
+                "10 x 2 = 20\n" +
+                "10 x 3 = 30\n" +
+                "10 x 4 = 40\n" +
+                "10 x 5 = 50\n" +
+                "10 x 6 = 60\n" +
+                "10 x 7 = 70\n" +
+                "10 x 8 = 80\n" +
+                "10 x 9 = 90\n" +
+                "10 x 10 = 100\n";
+
+        assertThat(outputStream.toString(), is(equalTo(expectedOutput)));
+    }
 }

@@ -1,17 +1,9 @@
 package project.f5.loop_java;
 
-/**
- * Hello world!
- */
 public final class App {
-    private App() {
-    }
-
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        MultiplicationTable table = new MultiplicationTable();
+        int n = 5;
+        table.printMultiplicationTable(n);
     }
 }
